@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <settings>
+        #Osäker om api nyckeln skall ligga i en config eller om man får skriva in den.
+        <apikey>abcdefghijklmnopqrstuvwxyzåäö</apikey>
+        <adservername>DC01</adservername>
+    </settings>
+    <enheter>
+        <goteborg>
+            <path>OU=test,OU=Users,OU=contoso,DC=contoso,DC=local</path>
+            <groups>[testgroup1,testgroup2]</groups>
+            <upnsuffix>contoso.local</upnsuffix>uffix>
+        </goteborg>
+        <stockholm>
+            <path>OU=test,OU=Users,OU=contoso,DC=contoso,DC=local</path>
+            <groups>[testgroup3,testgroup4]</groups>
+            <upnsuffix>contoso.local</upnsuffix>
+        </stockholm>
+    </enheter>
+</root>

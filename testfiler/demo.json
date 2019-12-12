@@ -1,0 +1,35 @@
+{
+    "config": {
+        "apikey": "abcd1234",
+        "servername": "DC01"
+    },
+    "enheter": {
+        "enhet1": {
+            "test":"enhet1",
+            "path":"OU=test,OU=Users,OU=contoso,DC=contoso,DC=local",
+            "groups":[
+                "testgroup1",
+                "testgroup2"
+            ],
+            "upnsuffix": "contoso.local"
+        },
+        "enhet2": {
+            "test":"enhet2",
+            "path":"OU=test,OU=Users,OU=contoso,DC=contoso,DC=local",
+            "groups":[
+                "testgroup3",
+                "testgroup4"
+            ],
+            "upnsuffix": "contoso.local"
+        },
+        "enhet3": {
+            "test3":"enhet3",
+            "path":"OU=test,OU=Users,OU=contoso,DC=contoso,DC=local",
+            "groups":[
+                "testgroup1",
+                "testgroup4"
+            ],
+            "upnsuffix": "contoso.local"
+        }
+    }
+}
