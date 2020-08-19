@@ -1,5 +1,5 @@
 #stupid script to check if the ports are open for carbonite DT on a specific host 100 times. Quick and dirty.
-$cname = "172.24.33.50"
+$cname = "ip address or hostname"
 $times = 100
 $text = "This script is testing ports 6320,6325,6326 on $cname $times times"
 
