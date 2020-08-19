@@ -1,0 +1,18 @@
+#stupid script to check if the ports are open for carbonite DT on a specific host 100 times. Quick and dirty.
+$cname = "172.24.33.50"
+$times = 100
+$text = "This script is testing ports 6320,6325,6326 on $cname $times times"
+
+Remove-Item -Path C:\testlogs.txt
+Out-file -FilePath C:\testlogs.txt -InputObject $text
+
+for ($i = 0 ; $i -lt $times; $i++)
+{
+#You probably can shorten this.
+$port1 = Test-NetConnection -ComputerName $cname -Port 6320
+$port2 = Test-NetConnection -ComputerName $cname -Port 6325
+$port3 = Test-NetConnection -ComputerName $cname -Port 6326
+Write-Host $i
+#This is horrible and i hate it.
+Out-File -FilePath C:\testlogs.txt -InputObject $port1.RemotePort,$port1.TcpTestSucceeded,$port2.RemotePort,$port2.TcpTestSucceeded,$port3.RemotePort,$port3.TcpTestSucceeded -Append
+}
